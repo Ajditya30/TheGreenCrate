@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/TheGreenCrate/static/css/main.3bd2d698.css",
-    "main.js": "/TheGreenCrate/static/js/main.0f7262c0.js",
+    "main.js": "/TheGreenCrate/static/js/main.3248aafd.js",
     "index.html": "/TheGreenCrate/index.html",
     "main.3bd2d698.css.map": "/TheGreenCrate/static/css/main.3bd2d698.css.map",
-    "main.0f7262c0.js.map": "/TheGreenCrate/static/js/main.0f7262c0.js.map"
+    "main.3248aafd.js.map": "/TheGreenCrate/static/js/main.3248aafd.js.map"
   },
   "entrypoints": [
     "static/css/main.3bd2d698.css",
-    "static/js/main.0f7262c0.js"
+    "static/js/main.3248aafd.js"
   ]
 }
