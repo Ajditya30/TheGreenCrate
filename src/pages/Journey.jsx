@@ -5,11 +5,13 @@ const Journey = () => {
   const steps = [
     {
       title: "Identifying the Problem",
-      description: "We started by recognizing the critical issue of food wastage in our community and beyond."
+      description: "We started by recognizing the critical issue of food wastage in our community and beyond.",
+      weeks: "Weeks 1-2"
     },
     {
       title: "Developing Project Focus",
-      description: "We narrowed our focus to perishable foods, specifically choosing papaya due to its significant transportation and storage challenges."
+      description: "We narrowed our focus to perishable foods, specifically choosing papaya due to its significant transportation and storage challenges.",
+      weeks: "Weeks 2-3"
     },
     {
       title: "Research Phase",
@@ -19,31 +21,60 @@ const Journey = () => {
         "Exploring cushioning options including newspaper shreds, coconut husk, and banana leaves",
         "Selecting bamboo for its feasibility, cost-effectiveness, and wide availability",
         "Adding anti-microbial properties to counter potential microbial growth in sustainable materials"
-      ]
+      ],
+      weeks: "Weeks 3-5"
     },
     {
       title: "Design & Prototyping",
-      description: "Moving from concept to reality through careful design and prototype development."
+      description: "Moving from concept to reality through careful design and prototype development.",
+      images: [
+        {
+          src: "/graphicdesign.jpg",
+          alt: "Prototype Design Sketches"
+        }
+      ],
+      weeks: "Weeks 5-6"
     },
     {
       title: "Building the Prototype",
-      description: "Hands-on construction of our sustainable packaging solution."
+      description: "Hands-on construction of our sustainable packaging solution.",
+      images: [
+        {
+          src: "/prototype1.jpg",
+          alt: "TheGreenCrate Prototype Construction"
+        }
+      ],
+      weeks: "Weeks 5-6"
     },
     {
       title: "Cushioning Development",
-      description: "Creating effective cushioning solutions using eco-friendly materials."
+      description: "Creating effective cushioning solutions using eco-friendly materials.",
+      weeks: "Weeks 6-7"
     },
     {
       title: "Chemical Treatment Research",
-      description: "Conducted microbial testing and mass loss analysis, ultimately selecting a 1%+1% combination of lactic and citric acid."
+      description: "Conducted microbial testing and mass loss analysis, ultimately selecting a 1%+1% combination of lactic and citric acid.",
+      images: [
+        {
+          src: "/masslossanalysis.jpg",
+          alt: "Preparing the Chemical Treatments"
+        },
+        {
+          src: "/microbialtesting.jpg",
+          alt: "Microbial Testing in Lab"
+        }
+      ],
+      weeks: "Weeks 7-10"
     },
     {
       title: "Business Planning",
-      description: "Developed a comprehensive business plan and calculated cost per unit."
+      description: "Developed a comprehensive business plan and calculated cost per unit.",
+      weeks: "Weeks 11-12"
     },
     {
       title: "Product Evaluation",
-      description: "Final assessment and identification of design improvements and cost reduction strategies."
+      description: "Final assessment and identification of design improvements and cost reduction strategies.",
+      weeks: "Weeks 11-12"
     }
   ];
 
@@ -80,14 +111,32 @@ const Journey = () => {
                 {/* Timeline dot */}
                 <div className="absolute top-6 -mt-1 w-4 h-4 rounded-full bg-emerald-500 shadow-lg transform -translate-x-1/2 left-0 md:left-auto md:right-0 md:translate-x-1/2" />
                 
-                <h3 className="text-xl font-semibold text-emerald-700 mb-2">{step.title}</h3>
+                <h3 className="text-xl font-semibold text-emerald-700 mb-1">{step.title}</h3>
+                <p className="text-sm text-emerald-500 font-medium mb-3">{step.weeks}</p>
                 <p className="text-gray-600 mb-2">{step.description}</p>
                 {step.bullets && (
-                  <ul className="list-disc list-inside text-gray-600 space-y-1">
+                  <ul className="list-disc list-inside text-gray-600 space-y-1 mb-4">
                     {step.bullets.map((bullet, i) => (
                       <li key={i} className="text-sm">{bullet}</li>
                     ))}
                   </ul>
+                )}
+                {step.images && (
+                  <div className="grid grid-cols-1 gap-4 mt-6">
+                    {step.images.map((image, i) => (
+                      <div 
+                        key={i} 
+                        className="rounded-xl overflow-hidden shadow-lg border-2 border-emerald-100 transform transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                      >
+                        <img 
+                          src={image.src} 
+                          alt={image.alt} 
+                          className="w-full h-auto object-cover"
+                        />
+                        <p className="text-sm font-medium text-center text-emerald-700 bg-emerald-50 p-3">{image.alt}</p>
+                      </div>
+                    ))}
+                  </div>
                 )}
               </div>
             </motion.div>

@@ -9,7 +9,7 @@ const Home = () => {
   };
 
   const teamMembers = [
-    { name: "Sparsh Phutela", role: "Coordinator" },
+    { name: "Sparsh Phutela", role: "Mentor" },
     { name: "Neil Chadha", role: "Team Member" },
     { name: "Aditya Jain", role: "Team Member" },
     { name: "Sahaj Khurana", role: "Team Member" },
@@ -50,8 +50,8 @@ const Home = () => {
       </section>
 
       {/* The Problem Section */}
-      <section className="h-screen bg-white flex flex-col justify-center">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="h-screen bg-white flex flex-col justify-center pb-32">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -61,7 +61,7 @@ const Home = () => {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">The Problem</h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-24">
             {[
               {
                 title: "High Post-harvest Losses",
@@ -97,15 +97,15 @@ const Home = () => {
       </section>
 
       {/* Our Solution Section */}
-      <section className="h-screen bg-emerald-50 flex flex-col justify-center">
+      <section className="min-h-screen bg-emerald-50 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="text-center mb-8"
+            className="text-center"
           >
-            <h2 className="text-4xl font-bold text-emerald-800">Our Solution: TheGreenCrate</h2>
+            <h2 className="text-4xl font-bold text-emerald-800 mb-16">Our Solution: TheGreenCrate</h2>
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -156,31 +156,35 @@ const Home = () => {
             </div>
 
             {/* Right column - Images */}
-            <div className="lg:col-span-1 space-y-4">
+            <div className="lg:col-span-1 space-y-12 flex flex-col justify-center">
               <motion.div 
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="bg-white rounded-lg shadow-sm overflow-hidden"
+                className="bg-white rounded-lg shadow-sm overflow-hidden h-64"
               >
-                <img 
-                  src="/prototype1.jpg" 
-                  alt="TheGreenCrate Prototype 1" 
-                  className="w-full h-full object-cover"
-                />
+                <div className="w-full h-full bg-emerald-50 flex items-center justify-center">
+                  <img 
+                    src="prototype1.jpg" 
+                    alt="TheGreenCrate Prototype 1" 
+                    className="w-full h-full object-contain p-2 rounded-lg"
+                  />
+                </div>
               </motion.div>
               <motion.div 
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
-                className="bg-white rounded-lg shadow-sm overflow-hidden"
+                className="bg-white rounded-lg shadow-sm overflow-hidden h-64"
               >
-                <img 
-                  src="/prototype2.jpg" 
-                  alt="TheGreenCrate Prototype 2" 
-                  className="w-full h-full object-cover"
-                />
+                <div className="w-full h-full bg-emerald-50 flex items-center justify-center">
+                  <img 
+                    src="prototype2.jpg" 
+                    alt="TheGreenCrate Prototype 2" 
+                    className="w-full h-full object-contain p-2 rounded-lg"
+                  />
+                </div>
               </motion.div>
             </div>
           </div>
@@ -250,16 +254,14 @@ const Home = () => {
               viewport={{ once: true }}
               className="aspect-video bg-white rounded-xl shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105"
             >
-              <div className="w-full h-full bg-gradient-to-br from-emerald-700 to-emerald-900 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-white/20 flex items-center justify-center">
-                    <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M8 5v10l8-5-8-5z" />
-                    </svg>
-                  </div>
-                  <p className="text-emerald-50 text-lg">Watch Our Story</p>
-                </div>
-              </div>
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/aa4YGXIXtJM"
+                title="TheGreenCrate Testimonial"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
             </motion.div>
 
             {/* Testimonials Cards */}
@@ -271,8 +273,12 @@ const Home = () => {
                 className="bg-white p-6 rounded-xl shadow-lg transform transition-transform duration-300 hover:scale-105"
               >
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center mr-4">
-                    <span className="text-xl text-emerald-700">R</span>
+                  <div className="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center mr-4 overflow-hidden">
+                    <img 
+                      src="Rakeshkumar.jpg" 
+                      alt="Rakesh Kumar"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold text-emerald-800">Rakesh Kumar</h4>
@@ -290,8 +296,12 @@ const Home = () => {
                 className="bg-white p-6 rounded-xl shadow-lg transform transition-transform duration-300 hover:scale-105"
               >
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center mr-4">
-                    <span className="text-xl text-emerald-700">S</span>
+                  <div className="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center mr-4 overflow-hidden">
+                    <img 
+                      src="satish.jpg" 
+                      alt="Satish"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold text-emerald-800">Satish</h4>

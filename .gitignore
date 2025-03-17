@@ -153,3 +153,9 @@ dist
 .env.test.local
 .env.production.local
 .cache
+
+# Large media files
+*.mp4
+*.mov
+*.avi
+*.wmv
