@@ -21,7 +21,12 @@ const Home = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <motion.div 
+      className="min-h-screen"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.3 }}
+    >
       {/* Hero Section */}
       <section className="h-screen flex flex-col items-center justify-center bg-gradient-to-br from-emerald-800 via-emerald-700 to-emerald-600">
         <motion.h1 
@@ -54,8 +59,8 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16">
           <motion.div
             initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">The Problem</h2>
@@ -83,9 +88,8 @@ const Home = () => {
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-emerald-50 p-6 rounded-lg"
               >
                 <h3 className="text-xl font-semibold text-emerald-800 mb-3">{item.title}</h3>
@@ -101,8 +105,8 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6 }}
             className="text-center"
           >
             <h2 className="text-4xl font-bold text-emerald-800 mb-16">Our Solution: TheGreenCrate</h2>
@@ -113,8 +117,8 @@ const Home = () => {
             <div className="lg:col-span-2 space-y-4">
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
                 className="bg-white p-6 rounded-lg shadow-sm"
               >
                 <h3 className="text-xl font-semibold text-emerald-700 mb-2">Bamboo-based Storage Box</h3>
@@ -123,9 +127,8 @@ const Home = () => {
 
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.1 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
                 className="bg-white p-6 rounded-lg shadow-sm"
               >
                 <h3 className="text-xl font-semibold text-emerald-700 mb-2">Antimicrobial Treatment</h3>
@@ -134,9 +137,8 @@ const Home = () => {
 
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
                 className="bg-white p-6 rounded-lg shadow-sm"
               >
                 <h3 className="text-xl font-semibold text-emerald-700 mb-2">Innovative Cushioning</h3>
@@ -145,9 +147,8 @@ const Home = () => {
 
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.3 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
                 className="bg-white p-6 rounded-lg shadow-sm"
               >
                 <h3 className="text-xl font-semibold text-emerald-700 mb-2">Scalable Solution</h3>
@@ -159,8 +160,8 @@ const Home = () => {
             <div className="lg:col-span-1 space-y-12 flex flex-col justify-center">
               <motion.div 
                 initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
                 className="bg-white rounded-lg shadow-sm overflow-hidden h-64"
               >
                 <div className="w-full h-full bg-emerald-50 flex items-center justify-center">
@@ -173,9 +174,8 @@ const Home = () => {
               </motion.div>
               <motion.div 
                 initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
                 className="bg-white rounded-lg shadow-sm overflow-hidden h-64"
               >
                 <div className="w-full h-full bg-emerald-50 flex items-center justify-center">
@@ -196,8 +196,8 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-emerald-800 mb-4">Vision & Mission Statement</h2>
@@ -207,8 +207,8 @@ const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
               className="bg-gradient-to-br from-emerald-600 to-emerald-700 p-8 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105"
             >
               <h3 className="text-2xl font-bold text-white mb-4">Our Mission</h3>
@@ -219,9 +219,8 @@ const Home = () => {
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
               className="bg-gradient-to-br from-emerald-700 to-emerald-800 p-8 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105"
             >
               <h3 className="text-2xl font-bold text-white mb-4">Our Vision</h3>
@@ -238,8 +237,8 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
             <h2 className="text-4xl font-bold text-emerald-800 mb-4">Testimonials</h2>
@@ -250,8 +249,8 @@ const Home = () => {
             {/* Video Section */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
               className="aspect-video bg-white rounded-xl shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105"
             >
               <iframe
@@ -268,8 +267,8 @@ const Home = () => {
             <div className="space-y-6">
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
                 className="bg-white p-6 rounded-xl shadow-lg transform transition-transform duration-300 hover:scale-105"
               >
                 <div className="flex items-center mb-4">
@@ -290,9 +289,8 @@ const Home = () => {
 
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
                 className="bg-white p-6 rounded-xl shadow-lg transform transition-transform duration-300 hover:scale-105"
               >
                 <div className="flex items-center mb-4">
@@ -320,8 +318,8 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-emerald-800 mb-4">Meet the Team</h2>
@@ -333,9 +331,8 @@ const Home = () => {
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
               >
                 <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-emerald-100 flex items-center justify-center">
@@ -348,7 +345,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-    </div>
+    </motion.div>
   );
 };
 
