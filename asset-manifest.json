@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/TheGreenCrate/static/css/main.3bd2d698.css",
+    "main.js": "/TheGreenCrate/static/js/main.f1e9f876.js",
+    "index.html": "/TheGreenCrate/index.html",
+    "main.3bd2d698.css.map": "/TheGreenCrate/static/css/main.3bd2d698.css.map",
+    "main.f1e9f876.js.map": "/TheGreenCrate/static/js/main.f1e9f876.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3bd2d698.css",
+    "static/js/main.f1e9f876.js"
+  ]
+}
